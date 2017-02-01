@@ -2,6 +2,6 @@
 
 This is my final project website.
 
-Lecture: Marten Stockenber.
+Lecture: Marten Stockenberg.
 
 Learning some PHP Object Oriented Programming with simple MVC Design Pattern.
