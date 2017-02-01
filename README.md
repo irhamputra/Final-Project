@@ -1,4 +1,4 @@
-# Final-Project / Abschlussprojekt for my diplome Web Design & Development SAE Leipzig 2017
+# Final Project / Abschlussprojekt Web Design & Development SAE Leipzig 2017
 
 This is my final project website.
 
