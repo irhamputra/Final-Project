@@ -5,8 +5,7 @@
             <?php foreach (\classes\core\App::$nav['footer'] as $param => $link) : ?>
                 <li><a href="?p=<?= $param ?>"><?= $link ?></a></li>
             <?php endforeach; ?>
-            <p>&copy; 2016 Company, Inc.</p>
         </ul>
     </nav>
-
+    <p>&copy; 2016 Camping Art, S.a.r.l</p>
 </div><!--/.container-->

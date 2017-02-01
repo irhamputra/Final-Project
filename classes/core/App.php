@@ -18,15 +18,17 @@ class App
 
     private $frontendNav = array(
         "home" => "Home",
+        "about" => "About Us",
         "how" => "How it Works",
-        "contact" => "Contact",
         "login" => "Login",
     );
 
     private $footer = array(
         "faq" => "FAQ",
         "job" => "Jobs",
-        "about" => "About Us"
+        "blog" => "Blog",
+        "team" => "Team",
+        "contact" => "Contact",
     );
 
     public static $nav = [];
