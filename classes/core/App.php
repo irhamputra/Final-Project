@@ -17,7 +17,7 @@ class App
     private $homepage = "home";
 
     private $frontendNav = array(
-        "home" => "Homepage",
+        "home" => "Home",
         "how" => "How it Works",
         "contact" => "Contact",
         "login" => "Login",
