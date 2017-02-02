@@ -30,15 +30,15 @@ class LoginController
 
     public function validationSignIn($data)
     {
-        if (isset($data["submit"])){
-            if (!isset($data["Username"]) || empty($data["Password"])){
+        if (isset($data["submit"])) {
+            if (!isset($data["Username"]) || empty($data["Password"])) {
                 $this->status["error"] = "Please fill the input";
             }
         }
 
-        if (empty($this->status["error"])){
+        if (empty($this->status["error"])) {
             $results = $this->loginModel->getSignInData($data);
-            if (count($results) > 0){
+            if (count($results) > 0) {
                 $_SESSION["username"] = $results[0]["user_username"];
                 $_SESSION["id"] = $results[0]["user_id"];
                 $_SESSION["role"] = $results[0]["user_role"];

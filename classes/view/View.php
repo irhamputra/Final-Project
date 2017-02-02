@@ -42,7 +42,6 @@ class View
     public function parse()
     {
         $output = "";
-
         $file = "template/" . $this->template . ".php";
         if (file_exists($file)){
             ob_start();

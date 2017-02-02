@@ -3,7 +3,8 @@
 <div class="container">
 
     <form class="form-signin">
-        <h3 class="form-signin-heading">Please sign in</h3>
+        <h3 class="form-signin-heading">Please sign in <span class="glyphicon glyphicon-log-in"
+                                                             aria-hidden="true"></span></h3>
 
         <label for="inputEmail" class="sr-only">Email address</label>
 

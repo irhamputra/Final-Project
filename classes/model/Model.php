@@ -21,18 +21,21 @@ class Model
         $this->db = Database::getDatabase();
     }
 
-    public static function newDestination($destination){
+    public static function newDestination($destination)
+    {
         header("Location: ?p=" . $destination);
         exit();
     }
 
-    public function get($sql, $array){
+    public function get($sql, $array)
+    {
         $stmt = $this->db->prepare($sql);
         $stmt->execute($array);
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function set($sql, $execArr = array()){
+    public function set($sql, $execArr = array())
+    {
         $stmt = $this->db->prepare($sql);
         $stmt->execute($execArr);
     }

@@ -40,8 +40,11 @@ class App
 
     public function __construct()
     {
-
         session_start();
+
+        /* Navigation
+         * Building Navigation & Footer
+         */
         self::$nav['frontend'] = $this->frontendNav;
         self::$nav['backend'] = $this->backendNav;
         self::$nav['footer'] = $this->footer;
@@ -50,16 +53,21 @@ class App
         $this->view = new View();
     }
 
-    // TODO: Ask Marten! HILFE!
-    /*
-     * Dies ist auch genauso nicht funktioniert. Wenn ich zur Webseite gehe, dann ist Backends Navigation da.
-     * Wenn ich if(!isset($role) schreibe, dann kommt die Frontend Navigation.
-     * Hilfe!
-     *
-     */
 
+    /*
+     * Navigation with Role for Backend and Frontend
+     * show Navigation Backend & Frontend
+     */
     public static function navigation($role)
     {
+        // TODO: Ask Marten! HILFE!
+        /*
+         * Dies ist auch genauso nicht funktioniert. Wenn ich zur Webseite gehe, dann ist Backends Navigation da.
+         * Wenn ich if(!isset($role) schreibe, dann kommt die Frontend Navigation.
+         * Hilfe!
+         *
+         */
+
         if (!isset($role)) {
             $file = "inc/backend.php";
             if (file_exists($file)) {
@@ -73,6 +81,10 @@ class App
         }
     }
 
+    /*
+     * Footer Template
+     * show the footer link page
+     */
     public static function footerTpl()
     {
         $file = "inc/footer.php";
@@ -81,25 +93,15 @@ class App
         }
     }
 
-    public function validationFooter($param)
-    {
-        if (!isset($param) || empty($param)) {
-            return $this->homepage;
-        } else {
-            if (array_key_exists($param, $this->footer)) {
-                return $param;
-            } else {
-                return $this->notFound;
-            }
-        }
-    }
-
+    /*
+     *
+     */
     public function execute()
     {
         $this->page = $this->validationPage($this->request['p']);
 
-        // TODO: Ask Marten! Hilfe.
-        /*
+
+        /* TODO: Ask Marten! Hilfe.
          * Diese Methode funktionert nicht. Eigentlich wollte ich mein Footer validieren.
          * Wenn diese Methode ich aktiviere, dann funktioniert Validation des Frontends
          *
@@ -145,6 +147,10 @@ class App
         }
     }
 
+    /* TODO: Ask Marten!
+     * Validation Page Content for Backend & Frontend
+     * But backend is still not working at all.
+     */
     public function validationPage($getParam)
     {
         // Validation Page Content
@@ -170,12 +176,34 @@ class App
         }
     }
 
+    /* TODO: Ask Marten!
+     * Validation Footer Page (But not working).
+     * I don't have idea, why :(
+     */
+
     private function logout()
     {
         if ($_GET['logout'] === true) {
             session_unset();
             session_destroy();
             Model::newDestination("home");
+        }
+    }
+
+    /*
+    * logout Function is to destroy session
+    */
+
+    public function validationFooter($param)
+    {
+        if (!isset($param) || empty($param)) {
+            return $this->homepage;
+        } else {
+            if (array_key_exists($param, $this->footer)) {
+                return $param;
+            } else {
+                return $this->notFound;
+            }
         }
     }
 }
