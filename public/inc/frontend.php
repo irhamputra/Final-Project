@@ -11,10 +11,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Camping Art</a>
+                    <a class="navbar-brand" href="#">
+                        <img src="http://i.imgur.com/zy5FkJl.png" alt="logo">
+                    </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav navbar-right">
                         <?php foreach (\classes\core\App::$nav['frontend'] as $param => $link) : ?>
                             <li><a href="?p=<?= $param ?>"><?= $link ?></a></li>
                         <?php endforeach; ?>
