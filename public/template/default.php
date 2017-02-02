@@ -40,7 +40,7 @@ require_once 'pages/' . $this->pageContent;
 
 <pre>
 <em>print_r:</em>
-<?php print_r(classes\database\Database::getDatabase()); ?>
+<?php print_r($_SESSION); ?>
 
 </pre>
 

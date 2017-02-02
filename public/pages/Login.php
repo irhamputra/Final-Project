@@ -5,12 +5,12 @@
 
         <label for="inputEmail" class="sr-only">Email address</label>
 
-        <input type="text" name="login['username']" id="inputUsername" class="form-control" placeholder="Username"
+        <input type="text" name="login[Username]" id="inputUsername" class="form-control" placeholder="Username"
                required autofocus>
 
         <label for="inputPassword" class="sr-only">Password</label>
 
-        <input type="password" name="login['password']" id="inputPassword" class="form-control" placeholder="Password"
+        <input type="password" name="login[Password]" id="inputPassword" class="form-control" placeholder="Password"
                required>
 
         <div class="checkbox">
@@ -19,7 +19,7 @@
             </label>
         </div>
         <input type="hidden" name="login[loginForm]" value="true"/>
-        <button class="btn btn-lg btn-primary btn-block" name="login['submit']" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" name="login[submit]" type="submit">Sign in</button>
     </form>
 
 </div> <!-- /container -->
