@@ -59,7 +59,9 @@ class App
      * Dies ist auch genauso nicht funktioniert. Wenn ich zur Webseite gehe, dann ist Backends Navigation da.
      * Wenn ich if(!isset($role) schreibe, dann kommt die Frontend Navigation.
      * Hilfe!
+     *
      */
+
     public static function navigation($role)
     {
         if (isset($role)) {
