@@ -2,7 +2,7 @@
 
 /**
  * Created by PhpStorm.
- * User: MacbookPro
+ * User: Muhamad Irham Prasetyo
  * Date: 2/1/17
  * Time: 2:57 PM
  */
@@ -15,10 +15,10 @@ use classes\controller\ContactController;
 
 class App
 {
+    public static $nav = [];
     public $page;
     private $homepage = "home";
     private $notFound = "404";
-
     private $frontendNav = array(
         "home" => "Home",
         "about" => "About Us",
@@ -27,14 +27,10 @@ class App
         "login" => "Login",
         "contact" => "Contact"
     );
-
-
     private $backendNav = array(
         "profile" => "Profile",
         "logout" => "Log Out"
     );
-
-
     private $footer = array(
         "faq" => "FAQ",
         "job" => "Jobs",
@@ -42,12 +38,10 @@ class App
         "team" => "Team"
     );
 
-    public static $nav = [];
-
     public function __construct()
     {
 
-        session_start();
+        //session_start();
         self::$nav['frontend'] = $this->frontendNav;
         self::$nav['backend'] = $this->backendNav;
         self::$nav['footer'] = $this->footer;
@@ -87,49 +81,16 @@ class App
         }
     }
 
-    public function validationPage($getParam)
+    public function validationFooter($param)
     {
-        // Validation Page Content
-        if (!isset($getParam) || empty($getParam)) {
+        if (!isset($param) || empty($param)) {
             return $this->homepage;
         } else {
-            if ($_SESSION["role"]) {
-                if (array_key_exists($getParam, $this->backendNav) ||
-                    array_key_exists($getParam, $this->frontendNav) &&
-                    array_key_exists($getParam, $this->footer)
-                ) {
-                    return $getParam;
-                } else {
-                    return $this->notFound;
-                }
-            } else {
-                if (!array_key_exists($getParam, $this->frontendNav)) {
-                    return $this->notFound;
-                } else {
-                    return $getParam;
-                }
-            }
-        }
-    }
-
-    public function validationFooter($param){
-        if (!isset($param) || empty($param)){
-            return $this->homepage;
-        } else {
-            if (array_key_exists($param, $this->footer)){
+            if (array_key_exists($param, $this->footer)) {
                 return $param;
             } else {
                 return $this->notFound;
             }
-        }
-    }
-
-    private function logout()
-    {
-        if ($_GET['logout'] == "true") {
-            session_unset();
-            session_destroy();
-            Model::newDestination("home");
         }
     }
 
@@ -156,8 +117,13 @@ class App
                 break;
 
             case "contact" :
-
-
+                $contactCont = new ContactController();
+                try {
+                    $contactCont->validation($this->request["contact"]);
+                    $this->view->status = $contactCont->status;
+                } catch (\Exception $e) {
+                    echo "Contact failed " . $e->getMessage();
+                }
                 break;
 
             case "login" :
@@ -169,7 +135,6 @@ class App
                 break;
         }
 
-
         $this->view->setTemplate("default");
         $this->view->pageContent = $this->page . ".php";
 
@@ -177,6 +142,40 @@ class App
             return $this->view->parse();
         } catch (\InvalidArgumentException $e) {
             echo $e->getMessage();
+        }
+    }
+
+    public function validationPage($getParam)
+    {
+        // Validation Page Content
+        if (!isset($getParam) || empty($getParam)) {
+            return $this->homepage;
+        } else {
+            if ($_SESSION["role"]) {
+                if (array_key_exists($getParam, $this->backendNav) ||
+                    array_key_exists($getParam, $this->frontendNav) &&
+                    array_key_exists($getParam, $this->footer)
+                ) {
+                    return $getParam;
+                } else {
+                    return $this->notFound;
+                }
+            } else {
+                if (!array_key_exists($getParam, $this->frontendNav)) {
+                    return $this->notFound;
+                } else {
+                    return $getParam;
+                }
+            }
+        }
+    }
+
+    private function logout()
+    {
+        if ($_GET['logout'] === true) {
+            session_unset();
+            session_destroy();
+            Model::newDestination("home");
         }
     }
 }

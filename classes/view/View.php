@@ -2,7 +2,7 @@
 
 /**
  * Created by PhpStorm.
- * User: MacbookPro
+ * User: Muhamad Irham Prasetyo
  * Date: 2/1/17
  * Time: 3:36 PM
  */
@@ -18,12 +18,6 @@ class View
         $this->data = array();
     }
 
-    public function __set($name, $value)
-    {
-        // TODO: Implement __set() method.
-        $this->data[$name] = $value;
-    }
-
     public function __get($name)
     {
         // TODO: Implement __get() method.
@@ -32,6 +26,12 @@ class View
         } else {
             throw new \InvalidArgumentException("$name is missing");
         }
+    }
+
+    public function __set($name, $value)
+    {
+        // TODO: Implement __set() method.
+        $this->data[$name] = $value;
     }
 
     public function setTemplate($template)

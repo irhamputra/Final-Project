@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: MacbookPro
+ * User: Muhamad Irham Prasetyo
  * Date: 2/1/17
  * Time: 3:57 PM
  */
@@ -13,8 +13,8 @@ use classes\model\Model;
 
 class LoginController
 {
-    private $loginModel;
     public $status;
+    private $loginModel;
 
     public function __construct()
     {
