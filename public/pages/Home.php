@@ -9,7 +9,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="first-slide"
+            <img class="first-slide img-responsive"
                  src="http://cdnimg.webstaurantstore.com/uploads/blog/2015/1/brand-header.jpg"
                  alt="First slide">
             <div class="container">
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="item">
-            <img class="second-slide"
+            <img class="second-slide img-responsive"
                  src="http://teuilamau.com/wp-content/uploads/2015/03/DigitalStrategy-1280x500.jpg"
                  alt="Second slide">
             <div class="container">
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="item">
-            <img class="third-slide"
+            <img class="third-slide img-responsive"
                  src="http://www.3shape.com/-/media/images/intro-tile-images/careers/career_webpage_tile-53-list-top-image_1b.png?"
                  alt="Third slide">
             <div class="container">

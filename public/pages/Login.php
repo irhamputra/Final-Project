@@ -3,7 +3,7 @@
 <div class="container">
 
     <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h3 class="form-signin-heading">Please sign in</h3>
 
         <label for="inputEmail" class="sr-only">Email address</label>
 
@@ -20,7 +20,6 @@
             </label>
         </div>
         <input type="hidden" name="login[loginForm]" value="true"/>
-        <br>
         <button class="btn btn-lg btn-primary btn-block" name="login[submit]" type="submit">Sign in</button>
     </form>
 

@@ -23,7 +23,7 @@ class App
         "home" => "Home",
         "about" => "About Us",
         "how" => "How it Works",
-        "gallery" => "Browse Gallery",
+        "talent" => "The Talent",
         "login" => "Login",
         "contact" => "Contact"
     );
@@ -41,7 +41,7 @@ class App
     public function __construct()
     {
 
-        //session_start();
+        session_start();
         self::$nav['frontend'] = $this->frontendNav;
         self::$nav['backend'] = $this->backendNav;
         self::$nav['footer'] = $this->footer;

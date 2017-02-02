@@ -3,7 +3,8 @@
 <div class="container">
 
     <form class="form-signin">
-        <h2 class="form-signin-heading">Contact us</h2>
+        <h3 class="form-signin-heading">Contact us</h3>
+        <p>Don't hestitate, just ask us!</p>
 
         <label for="firstname" class="sr-only">First Name</label>
         <input type="text" name="contact[Firstname]" id="firstname" class="form-control" placeholder="First Name"
@@ -21,7 +22,8 @@
 
         <label for="message" class="sr-only">Message</label>
 
-        <textarea name="contact[Message]" id="message" placeholder="Say Hi to us!" required autofocus style="width: 301px; height: 46px;"></textarea>
+        <textarea name="contact[Message]" id="message" placeholder="Say Hi to us!" required autofocus
+                  style="width: 301px; height: 150px;"></textarea>
         <input type="hidden" name="contact[contactform]" value="true"/>
 
         <br>
