@@ -15,6 +15,7 @@ use classes\controller\LoginController;
 class App
 {
     public $page;
+    private $homepage = "home";
     private $notFound = "404";
 
     private $frontendNav = array(
@@ -89,7 +90,7 @@ class App
     {
         // Validation Page Content
         if (!isset($getParam) || empty($getParam)) {
-            return $this->notFound;
+            return $this->homepage;
         } else {
             if ($_SESSION["role"]) {
                 if (array_key_exists($getParam, $this->backendNav) ||
