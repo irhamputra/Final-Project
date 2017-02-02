@@ -143,8 +143,8 @@ class App
          * $this->page = $this->validationFooter($this->request['p']);
          *
          * Hilfe dringend! Wie sollte ich machen?
+         *
          */
-
 
         $this->logout();
 
