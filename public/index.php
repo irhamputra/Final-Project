@@ -6,6 +6,11 @@
  * Time: 2:51 PM
  */
 
+define("__HOST__", "localhost");
+define("__DBNAME__", "finalproject");
+define("__USER__", "root");
+define("__PASSWORD__", "root");
+
 require_once "autoload.php";
 
 use classes\core\App;

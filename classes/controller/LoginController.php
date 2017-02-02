@@ -7,6 +7,7 @@
  */
 namespace classes\controller;
 
-class LoginController {
+class LoginController
+{
 
 }

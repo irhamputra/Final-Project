@@ -1,6 +1,6 @@
 <div class="container">
     <hr>
-    <nav class="navbar">
+    <nav class="navbar navbar-inverse">
         <ul class="nav navbar-nav">
             <?php foreach (\classes\core\App::$nav['footer'] as $param => $link) : ?>
                 <li><a href="?p=<?= $param ?>"><?= $link ?></a></li>

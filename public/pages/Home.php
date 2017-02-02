@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-lg-4">
             <img class="img-circle"
-                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                 src="http://www.choosebsg.com/images/icon9.png"
                  alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
@@ -80,7 +80,7 @@
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img class="img-circle"
-                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                 src="https://www.xlcreative.design/wp-content/themes/xlcreativev1/images/market.jpg"
                  alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
@@ -90,7 +90,7 @@
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img class="img-circle"
-                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                 src="http://www.codesroots.com/en/img/mlm.png"
                  alt="Generic placeholder image" width="140" height="140">
             <h2>Heading</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
@@ -114,7 +114,7 @@
                 commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+            <img class="featurette-image img-responsive center-block" src="http://xlay.vision/wp-content/uploads/2016/05/x500preview059a.png"
                  alt="Generic placeholder image">
         </div>
     </div>
@@ -130,7 +130,7 @@
                 commodo.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+            <img class="featurette-image img-responsive center-block" src="https://www.dreamkoder.com/images/services/email-template-design-service.jpg"
                  alt="Generic placeholder image">
         </div>
     </div>
@@ -145,7 +145,7 @@
                 commodo.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+            <img class="featurette-image img-responsive center-block" src="https://static1.squarespace.com/static/5345bc26e4b031e79ea205d4/t/544606dde4b078a91659de98/1413875421592/Digital_Pollinators_Video_Marketing"
                  alt="Generic placeholder image">
         </div>
     </div>

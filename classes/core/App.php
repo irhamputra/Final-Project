@@ -20,6 +20,7 @@ class App
         "home" => "Home",
         "about" => "About Us",
         "how" => "How it Works",
+        "gallery" => "Browse Gallery",
         "login" => "Login",
     );
 
