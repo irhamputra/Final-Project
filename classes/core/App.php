@@ -64,7 +64,7 @@ class App
 
     public static function navigation($role)
     {
-        if (isset($role)) {
+        if (!isset($role)) {
             $file = "inc/backend.php";
             if (file_exists($file)) {
                 include $file;
