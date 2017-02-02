@@ -11,6 +11,7 @@ namespace classes\core;
 use classes\model\Model;
 use classes\view\View;
 use classes\controller\LoginController;
+use classes\controller\ContactController;
 
 class App
 {
@@ -24,6 +25,7 @@ class App
         "how" => "How it Works",
         "gallery" => "Browse Gallery",
         "login" => "Login",
+        "contact" => "Contact"
     );
 
 
@@ -37,8 +39,7 @@ class App
         "faq" => "FAQ",
         "job" => "Jobs",
         "blog" => "Blog",
-        "team" => "Team",
-        "contact" => "Contact",
+        "team" => "Team"
     );
 
     public static $nav = [];
@@ -113,7 +114,7 @@ class App
 
     public function validationFooter($param){
         if (!isset($param) || empty($param)){
-            return $this->notFound;
+            return $this->homepage;
         } else {
             if (array_key_exists($param, $this->footer)){
                 return $param;
@@ -136,7 +137,7 @@ class App
     {
         $this->page = $this->validationPage($this->request['p']);
 
-        // TODO: Ask Marten!
+        // TODO: Ask Marten! Hilfe.
         /*
          * Diese Methode funktionert nicht. Eigentlich wollte ich mein Footer validieren.
          * Wenn diese Methode ich aktiviere, dann funktioniert Validation des Frontends
@@ -155,6 +156,7 @@ class App
                 break;
 
             case "contact" :
+
 
                 break;
 

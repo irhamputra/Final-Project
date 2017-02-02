@@ -1,3 +1,5 @@
+<hr>
+
 <div class="container">
 
     <form class="form-signin">
@@ -7,18 +9,18 @@
 
         <input type="text" name="login[Username]" id="inputUsername" class="form-control" placeholder="Username"
                required autofocus>
-
+        <br>
         <label for="inputPassword" class="sr-only">Password</label>
 
         <input type="password" name="login[Password]" id="inputPassword" class="form-control" placeholder="Password"
                required>
-
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
         <input type="hidden" name="login[loginForm]" value="true"/>
+        <br>
         <button class="btn btn-lg btn-primary btn-block" name="login[submit]" type="submit">Sign in</button>
     </form>
 
