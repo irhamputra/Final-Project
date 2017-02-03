@@ -9,12 +9,14 @@
     <meta name="author" content="">
 
     <title>Camping Art - All Designer's Home</title>
-
+    <!-- Blog Theme -->
+    <link href="http://getbootstrap.com/examples/blog/blog.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Sign In theme -->
     <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
     <!-- Carousel -->
     <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+
 
 
 </head>

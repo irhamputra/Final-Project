@@ -17,6 +17,7 @@
                     <h2>Why is Branding importand when you start a business?</h2>
                     <p>SMEs, outlet, restaurant, startup and any businesses need a good branding process to create a
                         solid strong foundation for the business to grow and compete in the market</p>
+                    <p><a class="btn btn-lg btn-primary" href="?p=blog" role="button">Why Branding</a></p>
                 </div>
             </div>
         </div>
@@ -72,7 +73,7 @@
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
                 vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
                 cursus magna.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-default" href="?p=about" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <img class="img-circle"

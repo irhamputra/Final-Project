@@ -43,7 +43,7 @@ class LoginController
                 $_SESSION["id"] = $results[0]["user_id"];
                 $_SESSION["role"] = $results[0]["user_role"];
 
-                Model::newDestination("profile");
+                Model::newDestination("home");
             }
         }
 
