@@ -26,7 +26,7 @@
 
 <?php
 
-\classes\core\App::navigation(false);
+\classes\core\App::navigation($_SESSION['role']);
 
 require_once 'pages/' . $this->pageContent;
 

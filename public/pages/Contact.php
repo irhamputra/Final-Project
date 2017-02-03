@@ -28,7 +28,7 @@
 
         <br>
 
-        <button class="btn btn-lg btn-primary btn-block" name="contact[submit]" type="submit" value="Send">Sign in
+        <button class="btn btn-lg btn-primary btn-block" name="contact[submit]" type="submit" value="send">Sign in
         </button>
     </form>
 
@@ -36,4 +36,5 @@
 
 <pre>
     <?php print_r($this->status); ?>
+    <?php print_r(PHPMailer\PHPMailer\PHPMailer::class) ?>
 </pre>

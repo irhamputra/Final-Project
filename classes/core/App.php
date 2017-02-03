@@ -15,28 +15,40 @@ use classes\controller\ContactController;
 
 class App
 {
-    public static $nav = [];
+    /*
+     * Building page content with parameter 'p'.
+     */
     public $page;
     private $homepage = "home";
     private $notFound = "404";
+
+    // Frontend page
     private $frontendNav = array(
         "home" => "Home",
         "about" => "About Us",
         "how" => "How it Works",
         "talent" => "The Talent",
         "login" => "Login",
-        "contact" => "Contact"
     );
+
+    // Backend page
     private $backendNav = array(
+        "home" => "Home",
+        "how" => "How it Works",
         "profile" => "Profile",
-        "logout" => "Log Out"
     );
+
+    // Footer page
     private $footer = array(
         "faq" => "FAQ",
         "job" => "Jobs",
         "blog" => "Blog",
-        "team" => "Team"
+        "team" => "Team",
+        "contact" => "Contact"
+
     );
+
+    public static $nav = [];
 
     public function __construct()
     {
@@ -60,15 +72,11 @@ class App
      */
     public static function navigation($role)
     {
-        // TODO: Ask Marten! HILFE!
         /*
-         * Dies ist auch genauso nicht funktioniert. Wenn ich zur Webseite gehe, dann ist Backends Navigation da.
-         * Wenn ich if(!isset($role) schreibe, dann kommt die Frontend Navigation.
-         * Hilfe!
-         *
+         * Problem in Login form is solved!
          */
 
-        if (!isset($role)) {
+        if (isset($role)) {
             $file = "inc/backend.php";
             if (file_exists($file)) {
                 include $file;
@@ -94,7 +102,7 @@ class App
     }
 
     /*
-     *
+     * Execute the code.
      */
     public function execute()
     {
@@ -103,7 +111,7 @@ class App
 
         /* TODO: Ask Marten! Hilfe.
          * Diese Methode funktionert nicht. Eigentlich wollte ich mein Footer validieren.
-         * Wenn diese Methode ich aktiviere, dann funktioniert Validation des Frontends
+         * Wenn diese Methode ich aktiviere, dann funktioniert Validation des Frontends.
          *
          * $this->page = $this->validationFooter($this->request['p']);
          *
@@ -114,10 +122,19 @@ class App
         $this->logout();
 
         switch ($this->page) {
+            // Load different Model & Controller
             case "home" :
 
                 break;
 
+            case "talent":
+                $talentContact = new ContactController();
+                try {
+                    $talentContact->validation($this->request["talent"]);
+                } catch (\Exception $e) {
+                    echo "Failed contact the talent " . $e->getMessage();
+                }
+                break;
             case "contact" :
                 $contactCont = new ContactController();
                 try {
@@ -149,7 +166,7 @@ class App
 
     /* TODO: Ask Marten!
      * Validation Page Content for Backend & Frontend
-     * But backend is still not working at all.
+     * But backend & footer are still not working at all.
      */
     public function validationPage($getParam)
     {
@@ -158,16 +175,16 @@ class App
             return $this->homepage;
         } else {
             if ($_SESSION["role"]) {
-                if (array_key_exists($getParam, $this->backendNav) ||
-                    array_key_exists($getParam, $this->frontendNav) &&
-                    array_key_exists($getParam, $this->footer)
-                ) {
+                // Backend & Frontend
+                if ((array_key_exists($getParam, $this->frontendNav) or array_key_exists($getParam, $this->footer)) or
+                    (array_key_exists($getParam, $this->backendNav) or array_key_exists($getParam, $this->footer))
+                ){
                     return $getParam;
                 } else {
                     return $this->notFound;
                 }
             } else {
-                if (!array_key_exists($getParam, $this->frontendNav)) {
+                if (!array_key_exists($getParam, $this->frontendNav) and !array_key_exists($getParam,$this->footer)) {
                     return $this->notFound;
                 } else {
                     return $getParam;
@@ -179,20 +196,6 @@ class App
     /* TODO: Ask Marten!
      * Validation Footer Page (But not working).
      * I don't have idea, why :(
-     */
-
-    private function logout()
-    {
-        if ($_GET['logout'] === true) {
-            session_unset();
-            session_destroy();
-            Model::newDestination("home");
-        }
-    }
-
-    /*
-    * logout Function is to destroy session
-    */
 
     public function validationFooter($param)
     {
@@ -206,6 +209,21 @@ class App
             }
         }
     }
+    */
+
+    /*
+    * logout Function is to destroy session
+    */
+    private function logout()
+    {
+        if ($_GET['logout'] == "true") {
+            session_unset();
+            session_destroy();
+            Model::newDestination("home");
+        }
+    }
+
+
 }
 
 

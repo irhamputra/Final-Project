@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <form class="form-signin">
+    <form class="form-signin" method="post">
         <h3 class="form-signin-heading">Please sign in <span class="glyphicon glyphicon-log-in"
                                                              aria-hidden="true"></span></h3>
 
