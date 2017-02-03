@@ -10,7 +10,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="?p=home">
                         <img src="http://i.imgur.com/zy5FkJl.png" alt="logo">
                     </a>
                 </div>

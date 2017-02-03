@@ -8,6 +8,7 @@
  */
 namespace classes\core;
 
+use classes\controller\NewsController;
 use classes\model\Model;
 use classes\view\View;
 use classes\controller\LoginController;
@@ -15,7 +16,7 @@ use classes\controller\ContactController;
 
 class App
 {
-    /*
+    /* Session 1
      * Building page content with parameter 'p'.
      */
     public $page;
@@ -34,7 +35,7 @@ class App
     // Backend page
     private $backendNav = array(
         "home" => "Home",
-        "how" => "How it Works",
+        "news" => "News & Deadlines",
         "profile" => "Profile",
     );
 
@@ -45,7 +46,6 @@ class App
         "blog" => "Blog",
         "team" => "Team",
         "contact" => "Contact"
-
     );
 
     public static $nav = [];
@@ -66,16 +66,11 @@ class App
     }
 
 
-    /*
-     * Navigation with Role for Backend and Frontend
+    /* Navigation with Role for Backend and Frontend
      * show Navigation Backend & Frontend
      */
     public static function navigation($role)
     {
-        /*
-         * Problem in Login form is solved!
-         */
-
         if (isset($role)) {
             $file = "inc/backend.php";
             if (file_exists($file)) {
@@ -89,9 +84,8 @@ class App
         }
     }
 
-    /*
-     * Footer Template
-     * show the footer link page
+    /* Footer Template
+     * show footer link page
      */
     public static function footerTpl()
     {
@@ -101,39 +95,20 @@ class App
         }
     }
 
-    /*
-     * Execute the code.
+    /* Execute the code.
+     * Load the different Model & Controller in SWITCH CASE function.
      */
     public function execute()
     {
         $this->page = $this->validationPage($this->request['p']);
 
-
-        /* TODO: Ask Marten! Hilfe.
-         * Diese Methode funktionert nicht. Eigentlich wollte ich mein Footer validieren.
-         * Wenn diese Methode ich aktiviere, dann funktioniert Validation des Frontends.
-         *
-         * $this->page = $this->validationFooter($this->request['p']);
-         *
-         * Hilfe dringend! Wie sollte ich machen?
-         *
-         */
-
         $this->logout();
 
         switch ($this->page) {
-            // Load different Model & Controller
             case "home" :
-
                 break;
-
-            case "talent":
-                $talentContact = new ContactController();
-                try {
-                    $talentContact->validation($this->request["talent"]);
-                } catch (\Exception $e) {
-                    echo "Failed contact the talent " . $e->getMessage();
-                }
+            case "news":
+                $this->view->news = new NewsController();
                 break;
             case "contact" :
                 $contactCont = new ContactController();
@@ -144,7 +119,6 @@ class App
                     echo "Contact failed " . $e->getMessage();
                 }
                 break;
-
             case "login" :
                 try {
                     $login = new LoginController();
@@ -164,10 +138,7 @@ class App
         }
     }
 
-    /* TODO: Ask Marten!
-     * Validation Page Content for Backend & Frontend
-     * But backend & footer are still not working at all.
-     */
+
     public function validationPage($getParam)
     {
         // Validation Page Content
@@ -178,13 +149,13 @@ class App
                 // Backend & Frontend
                 if ((array_key_exists($getParam, $this->frontendNav) or array_key_exists($getParam, $this->footer)) or
                     (array_key_exists($getParam, $this->backendNav) or array_key_exists($getParam, $this->footer))
-                ){
+                ) {
                     return $getParam;
                 } else {
                     return $this->notFound;
                 }
             } else {
-                if (!array_key_exists($getParam, $this->frontendNav) and !array_key_exists($getParam,$this->footer)) {
+                if (!array_key_exists($getParam, $this->frontendNav) and !array_key_exists($getParam, $this->footer)) {
                     return $this->notFound;
                 } else {
                     return $getParam;
@@ -193,27 +164,7 @@ class App
         }
     }
 
-    /* TODO: Ask Marten!
-     * Validation Footer Page (But not working).
-     * I don't have idea, why :(
-
-    public function validationFooter($param)
-    {
-        if (!isset($param) || empty($param)) {
-            return $this->homepage;
-        } else {
-            if (array_key_exists($param, $this->footer)) {
-                return $param;
-            } else {
-                return $this->notFound;
-            }
-        }
-    }
-    */
-
-    /*
-    * logout Function is to destroy session
-    */
+    // Logout function destroys session
     private function logout()
     {
         if ($_GET['logout'] == "true") {
@@ -222,8 +173,6 @@ class App
             Model::newDestination("home");
         }
     }
-
-
 }
 
 
