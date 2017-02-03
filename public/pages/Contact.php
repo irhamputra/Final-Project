@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <form class="form-signin">
+    <form class="form-signin" method="post">
         <h3 class="form-signin-heading">Contact us</h3>
         <p>Don't hestitate, just ask us!</p>
 
@@ -24,11 +24,16 @@
 
         <textarea name="contact[Message]" id="message" placeholder="Say Hi to us!" required autofocus
                   style="width: 301px; height: 150px;"></textarea>
-        <input type="hidden" name="contact[contactform]" value="true"/>
+        <input type="hidden" name="contact[contactForm]" value="true"/>
 
         <br>
 
-        <button class="btn btn-lg btn-primary btn-block" name="contact[submit]" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" name="contact[submit]" type="submit" value="Send">Sign in
+        </button>
     </form>
 
 </div> <!-- /container -->
+
+<pre>
+    <?php print_r($this->status); ?>
+</pre>

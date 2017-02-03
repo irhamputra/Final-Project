@@ -20,16 +20,19 @@ class ContactController
 
     public function validation($data)
     {
-        if (isset($data["submit"])){
-            foreach ($data as $input => $value){
-                if (empty($value)){
-                    $this->status[] = "Please fill this " . $input . " field";
+        if (isset($data["submit"])) {
+            foreach ($data as $input => $value) {
+                if (empty($value)) {
+                    $this->status[] = "Please fill this field: " . $input;
                 }
             }
-            if (empty($this->status)){
+
+            if (empty($this->status)) {
                 $contactModel = new ContactModel();
                 $contactModel->sendContact($data);
             }
         }
+
     }
+
 }
