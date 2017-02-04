@@ -20,7 +20,7 @@ Frontend
 
 Backend
 1. Home
-2. About Us
+2. News & Deadlines
 3. Profile
 4. Logout
 
