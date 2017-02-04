@@ -38,6 +38,5 @@ class NewsController
                 Model::newDestination("news");
             }
         }
-
     }
 }

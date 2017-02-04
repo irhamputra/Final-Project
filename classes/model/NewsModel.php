@@ -24,13 +24,13 @@ class NewsModel extends Model
 
     public function insertNews($data)
     {
-        $sql = "INSERT INTO news (news_title, news_description, news_image_url, news_deadline) 
+        $sql = "INSERT INTO `news` (news_title, news_description, news_image_url, news_deadline) 
                 VALUES (:title, :description, :image_url, :deadline)";
         $this->set($sql, [
-            ":title" => $data["title"],
-            ":description" => $data["description"],
-            ":image_url" => $data["imageUrl"],
-            ":deadline" => $data["deadline"]
+            ":title" => $data["Title"],
+            ":description" => $data["Description"],
+            ":image_url" => $data["ImageUrl"],
+            ":deadline" => $data["Deadline"],
         ]);
 
     }
