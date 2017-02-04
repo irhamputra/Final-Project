@@ -16,16 +16,8 @@
     <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
     <!-- Carousel -->
     <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
-
-
-
 </head>
-
 <body>
-
-
-
-
 <?php
 
 \classes\core\App::navigation($_SESSION['role']);
@@ -35,16 +27,6 @@ require_once 'pages/' . $this->pageContent;
 \classes\core\App::footerTpl();
 
 ?>
-
-
-
-
-
-<pre>
-<em>print_r:</em>
-<?php print_r($_SESSION); ?>
-
-</pre>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
