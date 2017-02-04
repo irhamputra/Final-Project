@@ -1,4 +1,4 @@
-Final Project / Abschlussprojekt Web Design & Development SAE Leipzig 2017 
+Final Project / Abschlussprojekt Web Design & Development
 -
 
 Lecture: Marten Stockenberg.
