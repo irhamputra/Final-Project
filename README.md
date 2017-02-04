@@ -30,3 +30,6 @@ Footer
 3. Blog
 4. Team of Camping Art
 5. Contact
+
+This website is definitive offline, you have to put all the stuff into your localhost
+You can simple log in with Username: admin Password: admin.
