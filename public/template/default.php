@@ -25,7 +25,6 @@
 require_once 'pages/' . $this->pageContent;
 
 \classes\core\App::footerTpl();
-
 ?>
 
 <!-- Bootstrap core JavaScript

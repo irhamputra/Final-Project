@@ -39,11 +39,11 @@ class LoginController
         if (empty($this->status["error"])) {
             $results = $this->loginModel->getSignInData($data);
             if (count($results) > 0) {
-                $_SESSION["username"] = $results[0]["user_username"];
                 $_SESSION["id"] = $results[0]["user_id"];
+                $_SESSION["username"] = $results[0]["user_username"];
                 $_SESSION["role"] = $results[0]["user_role"];
-
-                Model::newDestination("home");
+                $_SESSION["created"] = $results[0]["user_created"];
+                Model::newDestination("profile");
             }
         }
 

@@ -9,6 +9,7 @@
 namespace classes\core;
 
 use classes\controller\NewsController;
+use classes\controller\UsersController;
 use classes\model\Model;
 use classes\view\View;
 use classes\controller\LoginController;
@@ -22,6 +23,7 @@ class App
     public $page;
     private $homepage = "home";
     private $notFound = "404";
+    public $signup = "signup";
 
     // Frontend page
     private $frontendNav = array(
@@ -119,6 +121,13 @@ class App
                     echo "Contact failed " . $e->getMessage();
                 }
                 break;
+            case "signup":
+                try {
+                    $users = new UsersController();
+                } catch (\Exception $e){
+                    echo "Sign up failed " . $e->getMessage();
+                }
+                break;
             case "login" :
                 try {
                     $login = new LoginController();
@@ -155,7 +164,8 @@ class App
                     return $this->notFound;
                 }
             } else {
-                if (!array_key_exists($getParam, $this->frontendNav) and !array_key_exists($getParam, $this->footer)) {
+                if (!array_key_exists($getParam, $this->frontendNav) and !array_key_exists($getParam, $this->footer) and
+                    $this->signup == "false") {
                     return $this->notFound;
                 } else {
                     return $getParam;
@@ -164,13 +174,16 @@ class App
         }
     }
 
-    // Logout function destroys session
+    /* logout button destroy & unset session.
+     * redirect to homepage
+     */
     private function logout()
     {
-        if ($_GET['logout'] == "true") {
+        if ($_GET["logout"] == "true"){
             session_unset();
             session_destroy();
             Model::newDestination("home");
+            exit();
         }
     }
 }
