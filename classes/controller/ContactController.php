@@ -22,7 +22,7 @@ class ContactController
     {
         if (isset($data["submit"])) {
             foreach ($data as $input => $value) {
-                if (empty($value)) {
+                if (empty($value) && $input != "submit") {
                     $this->status[] = "Please fill this field: " . $input;
                 }
             }

@@ -16,9 +16,11 @@ class ContactModel extends Model
     {
         /* TODO: Ask Marten! Hilfe
          * Fehlermeldung: Fatal Error - PHPMailer is not found in ContactModel line 20.
-         * Keine Ahnung, was los ist.
          */
+
         $mail = new PHPMailer();
+
+        print_r($mail);
         $mail->setFrom("no-reply@campingart.com", "Camping Art - Contact Field");
         $mail->addAddress("hello@irhamputra.com");
         $mail->addReplyTo($data["email"]);

@@ -19,10 +19,8 @@
         <input type="password" name="signup[Password]" id="inputPassword" class="form-control" placeholder="Password"
                required>
         <p class="pull-left" style="padding-right: 10px">Please choose: </p>
-        <select title="role">
-            <option name="signup[Role]" value="clients">Client</option>
-            <option name="signup[Role]" value="designer">Designer</option>
-        </select>
+        <input type="radio" name="signup[Role]" value="Client" required> Client<br>
+        <input type="radio" name="signup[Role]" value="Designer" required> Designer<br>
 
         <div class="checkbox">
             <label>
@@ -30,6 +28,6 @@
             </label>
         </div>
         <input type="hidden" name="signup[usersForm]" value="true"/>
-        <button class="btn btn-lg btn-primary btn-block" name="signup[submit]" type="submit">Sign up</button>
+        <input class="btn btn-lg btn-primary btn-block" name="signup[submit]" type="submit" value="Sign up">
     </form>
 </div>

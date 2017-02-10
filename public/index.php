@@ -11,7 +11,7 @@ define("__DBNAME__", "finalproject");
 define("__USER__", "root");
 define("__PASSWORD__", "root");
 
-require_once "autoload.php";
+require_once "../vendor/autoload.php";
 
 use classes\core\App;
 

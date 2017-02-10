@@ -30,13 +30,13 @@ class UsersController
 
     public function checkUsersIn($data)
     {
+
         if ($data["submit"]){
+
             if (empty($this->status["error"]))
             {
                 $this->model->insertUsers($data);
-                echo "Success!";
                 Model::newDestination("signup");
-                exit();
             }
         }
     }
