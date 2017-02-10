@@ -36,7 +36,7 @@ class UsersController
             if (empty($this->status["error"]))
             {
                 $this->model->insertUsers($data);
-                Model::newDestination("signup");
+                Model::newDestination("login");
             }
         }
     }

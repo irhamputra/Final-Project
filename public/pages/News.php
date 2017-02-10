@@ -30,11 +30,15 @@
 
     <h3 class="form-signin-heading">All News & Deadlines</h3>
 
-    <?php
-    echo '<pre>';
-    print_r($this->news->allNews);
-    echo '</pre>';
-    ?>
+    <?php foreach($this->news->allNews as $key_row => $news_entry) : ?>
+        <div class="container">
+            <h6>Date: <?= $news_entry['news_timestamp'] ?></h6>
+            <h4><?= $news_entry['news_title'] ?></h4>
+            <p><?= $news_entry['news_description'] ?></p>
+            <h5>Deadline: <?= $news_entry['news_deadline'] ?></h5>
+            <hr style="; border-color:black">
+        </div>
+    <?php endforeach; ?>
 
 </div> <!-- /container -->
 
