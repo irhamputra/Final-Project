@@ -31,12 +31,12 @@
     <h3 class="form-signin-heading">All News & Deadlines</h3>
 
     <?php foreach($this->news->allNews as $key_row => $news_entry) : ?>
-        <div class="container">
+        <div class="form-signin-heading">
             <h6>Date: <?= $news_entry['news_timestamp'] ?></h6>
             <h4><?= $news_entry['news_title'] ?></h4>
             <p><?= $news_entry['news_description'] ?></p>
             <h5>Deadline: <?= $news_entry['news_deadline'] ?></h5>
-            <hr style="; border-color:black">
+            <hr style="border-color:black">
         </div>
     <?php endforeach; ?>
 
