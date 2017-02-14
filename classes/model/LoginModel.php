@@ -9,8 +9,9 @@
 namespace classes\model;
 
 /**
- * create method to connect login form and db-sql
- * @param mixed $data
+ * View and validate all data in sql
+ * Class LoginModel
+ * @package classes\model
  */
 class LoginModel extends Model
 {

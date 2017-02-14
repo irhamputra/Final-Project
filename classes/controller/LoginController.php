@@ -11,6 +11,11 @@ namespace classes\controller;
 use classes\model\LoginModel;
 use classes\model\Model;
 
+/**
+ * Control login form, all form must be validated and when success, user can go to profile page automatically
+ * Class LoginController
+ * @package classes\controller
+ */
 class LoginController
 {
     public $status;

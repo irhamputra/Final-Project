@@ -8,7 +8,11 @@
 
 namespace classes\model;
 
-
+/**
+ * Insert all data form into sql through the signup field
+ * Class UsersModel
+ * @package classes\model
+ */
 class UsersModel extends Model
 {
     public function __construct()

@@ -12,9 +12,9 @@ use classes\model\Model;
 use classes\model\NewsModel;
 
 /**
- * Control all news in news & deadline session
- * Check news data that come through the form field.
- * @param mixed $data
+ * Control all news form and add connection to News Model
+ * Class NewsController
+ * @package classes\controller
  */
 class NewsController
 {

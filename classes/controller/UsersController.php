@@ -12,8 +12,9 @@ use classes\model\Model;
 use classes\model\UsersModel;
 
 /**
- * Control the user through the signup field
- * @param mixed $data
+ * Control user that want to add to model
+ * Class UsersController
+ * @package classes\controller
  */
 class UsersController
 {

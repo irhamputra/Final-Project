@@ -10,6 +10,11 @@ namespace classes\model;
 
 use classes\database\Database;
 
+/**
+ * Core Model application
+ * Class Model
+ * @package classes\model
+ */
 class Model
 {
     use Database;

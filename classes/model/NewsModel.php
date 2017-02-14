@@ -8,7 +8,11 @@
 
 namespace classes\model;
 
-
+/**
+ * Insert all data into sql through the news field
+ * Class NewsModel
+ * @package classes\model
+ */
 class NewsModel extends Model
 {
     public function __construct()

@@ -15,6 +15,11 @@ use classes\view\View;
 use classes\controller\LoginController;
 use classes\controller\ContactController;
 
+/**
+ * Main application Camping Art website.
+ * Class App
+ * @package classes\core
+ */
 class App
 {
     /**

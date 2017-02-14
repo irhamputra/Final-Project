@@ -6,6 +6,10 @@
  * Time: 2:51 PM
  */
 
+/**
+ * Define the constant for server.
+ * It can be different in your own server setting
+ */
 define("__HOST__", "localhost");
 define("__DBNAME__", "finalproject");
 define("__USER__", "root");

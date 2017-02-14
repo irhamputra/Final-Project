@@ -11,7 +11,9 @@ namespace classes\controller;
 use classes\model\ContactModel;
 
 /**
- * Control all field in contact.php.
+ * Controll all contact field
+ * Class ContactController
+ * @package classes\controller
  */
 class ContactController
 {

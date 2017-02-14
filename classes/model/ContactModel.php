@@ -11,7 +11,9 @@ namespace classes\model;
 use PHPMailer\PHPMailer\PHPMailer;
 
 /**
- * Send all message in contact.php using PHPMailer Object
+ * Send all contact field through PHPMailer Object
+ * Class ContactModel
+ * @package classes\model
  * @link https://github.com/PHPMailer/PHPMailer
  */
 class ContactModel extends Model
