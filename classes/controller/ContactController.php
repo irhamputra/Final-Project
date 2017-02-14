@@ -9,6 +9,10 @@
 namespace classes\controller;
 
 use classes\model\ContactModel;
+
+/**
+ * Control all field in contact.php.
+ */
 class ContactController
 {
     public $status = array();

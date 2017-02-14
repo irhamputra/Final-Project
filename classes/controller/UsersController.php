@@ -10,6 +10,11 @@ namespace classes\controller;
 
 use classes\model\Model;
 use classes\model\UsersModel;
+
+/**
+ * Control the user through the signup field
+ * @param mixed $data
+ */
 class UsersController
 {
     public $allUsers;
@@ -30,13 +35,12 @@ class UsersController
 
     public function checkUsersIn($data)
     {
-
         if ($data["submit"]){
-
             if (empty($this->status["error"]))
             {
                 $this->model->insertUsers($data);
                 Model::newDestination("login");
+                exit();
             }
         }
     }

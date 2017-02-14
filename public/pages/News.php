@@ -5,6 +5,7 @@
     <form class="form-signin" method="post">
 
         <h3 class="form-signin-heading">News & Deadlines form</h3>
+
         <label for="inputEmail" class="sr-only">Title</label>
         <input type="text" name="news[Title]" id="inputTitle" class="form-control" placeholder="Title"
                required autofocus>
@@ -35,6 +36,7 @@
             <h6>Date: <?= $news_entry['news_timestamp'] ?></h6>
             <h4><?= $news_entry['news_title'] ?></h4>
             <p><?= $news_entry['news_description'] ?></p>
+            <p>Image URL: <a><?= $news_entry['news_image_url'] ?></a></p>
             <h5>Deadline: <?= $news_entry['news_deadline'] ?></h5>
             <hr style="border-color:black">
         </div>

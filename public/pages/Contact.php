@@ -1,7 +1,6 @@
 <hr>
 
 <div class="container">
-
     <form class="form-signin" method="post">
         <h3 class="form-signin-heading">Contact us</h3>
         <p>Don't hestitate, just ask us!</p>
@@ -31,9 +30,4 @@
         <button class="btn btn-lg btn-primary btn-block" name="contact[submit]" type="submit">Sign in
         </button>
     </form>
-
 </div> <!-- /container -->
-
-<pre>
-    <?php print_r($this->status); ?>
-</pre>

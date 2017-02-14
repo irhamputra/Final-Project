@@ -10,14 +10,14 @@ namespace classes\model;
 
 use PHPMailer\PHPMailer\PHPMailer;
 
+/**
+ * Send all message in contact.php using PHPMailer Object
+ * @link https://github.com/PHPMailer/PHPMailer
+ */
 class ContactModel extends Model
 {
     public function sendContact($data)
     {
-        /* TODO: Ask Marten! Hilfe
-         * Fehlermeldung: Fatal Error - PHPMailer is not found in ContactModel line 20.
-         */
-
         $mail = new PHPMailer();
 
         print_r($mail);

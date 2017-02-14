@@ -8,7 +8,10 @@
 
 namespace classes\model;
 
-
+/**
+ * create method to connect login form and db-sql
+ * @param mixed $data
+ */
 class LoginModel extends Model
 {
     public function __construct()

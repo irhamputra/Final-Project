@@ -17,7 +17,8 @@ use classes\controller\ContactController;
 
 class App
 {
-    /* Session 1
+    /**
+     * Session 1
      * Building page content with parameter 'p'.
      */
     public $page;
@@ -56,7 +57,8 @@ class App
     {
         session_start();
 
-        /* Navigation
+        /**
+         * Navigation
          * Building Navigation & Footer
          */
         self::$nav['frontend'] = $this->frontendNav;
@@ -68,7 +70,8 @@ class App
     }
 
 
-    /* Navigation with Role for Backend and Frontend
+    /**
+     * Navigation with Role for Backend and Frontend
      * show Navigation Backend & Frontend
      */
     public static function navigation($role)
@@ -86,7 +89,8 @@ class App
         }
     }
 
-    /* Footer Template
+    /**
+     * Footer Template
      * show footer link page
      */
     public static function footerTpl()
@@ -97,7 +101,8 @@ class App
         }
     }
 
-    /* Execute the code.
+    /**
+     * Execute the code.
      * Load the different Model & Controller in SWITCH CASE function.
      */
     public function execute()
@@ -147,15 +152,14 @@ class App
         }
     }
 
-
+    // Validation Page Content
     public function validationPage($getParam)
     {
-        // Validation Page Content
         if (!isset($getParam) || empty($getParam)) {
             return $this->homepage;
         } else {
             if ($_SESSION["role"]) {
-                // Backend & Frontend
+                // Backend, Frontend & Footer
                 if ((array_key_exists($getParam, $this->frontendNav) or array_key_exists($getParam, $this->footer)) or
                     (array_key_exists($getParam, $this->backendNav) or array_key_exists($getParam, $this->footer))
                 ) {
@@ -164,6 +168,7 @@ class App
                     return $this->notFound;
                 }
             } else {
+                // Back to the frontend page
                 if (!array_key_exists($getParam, $this->frontendNav) and !array_key_exists($getParam, $this->footer) and
                     $this->signup == "false") {
                     return $this->notFound;
@@ -174,8 +179,9 @@ class App
         }
     }
 
-    /* logout button destroy & unset session.
-     * redirect to homepage
+    /**
+     * logout button destroy & terminate session.
+     * back to location home.
      */
     private function logout()
     {
