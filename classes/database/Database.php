@@ -8,8 +8,17 @@
  */
 namespace classes\database;
 
+/**
+ * Connect the database
+ * Class Database
+ * @package classes\database
+ */
 trait Database
 {
+    /**
+     * Make a connection to MySQL
+     * @return \PDO
+     */
     public static function getDatabase()
     {
         try {

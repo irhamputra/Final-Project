@@ -17,13 +17,24 @@ use classes\model\ContactModel;
  */
 class ContactController
 {
+    /**
+     * All status contact
+     * @var array
+     */
     public $status = array();
 
+    /**
+     * ContactController constructor.
+     */
     public function __construct()
     {
 
     }
 
+    /**
+     * Validate data in contact form
+     * @param $data
+     */
     public function validation($data)
     {
         if (isset($data["submit"])) {

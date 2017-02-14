@@ -18,10 +18,14 @@ use classes\model\NewsModel;
  */
 class NewsController
 {
+
     public $allNews;
     public $status;
     private $request, $model;
 
+    /**
+     * NewsController constructor.
+     */
     public function __construct()
     {
         $this->request = array_merge($_GET, $_POST);
@@ -29,12 +33,19 @@ class NewsController
         $this->execute();
     }
 
+    /**
+     * Execute the code
+     */
     public function execute()
     {
         $this->allNews = $this->model->getNews();
         $this->checkNews($this->request["news"]);
     }
 
+    /**
+     * Check the data information in News & Deadline page
+     * @param $data
+     */
     public function checkNews($data)
     {
         if ($data["submit"]){

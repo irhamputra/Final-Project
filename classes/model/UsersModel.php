@@ -9,23 +9,33 @@
 namespace classes\model;
 
 /**
- * Insert all data form into sql through the signup field
  * Class UsersModel
  * @package classes\model
  */
 class UsersModel extends Model
 {
+    /**
+     * UsersModel constructor.
+     */
     public function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * Get data from db
+     * @return array
+     */
     public function getUsers()
     {
         $sql = "SELECT * FROM users";
         return $this->get($sql, array());
     }
 
+    /**
+     * Insert data user to db
+     * @param $data
+     */
     public function insertUsers($data)
     {
         $sql = "INSERT INTO `users` (user_username, user_password, user_email, user_role)

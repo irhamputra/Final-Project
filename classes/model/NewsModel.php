@@ -9,23 +9,33 @@
 namespace classes\model;
 
 /**
- * Insert all data into sql through the news field
  * Class NewsModel
  * @package classes\model
  */
 class NewsModel extends Model
 {
+    /**
+     * NewsModel constructor.
+     */
     public function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * Get all news information from MySQL
+     * @return array
+     */
     public function getNews()
     {
         $sql = "SELECT * FROM news ";
         return $this->get($sql, array());
     }
 
+    /**
+     * Insert the information through news field and set it into db
+     * @param $data
+     */
     public function insertNews($data)
     {
         $sql = "INSERT INTO `news` (news_title, news_description, news_image_url, news_deadline) 

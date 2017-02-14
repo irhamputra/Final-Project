@@ -9,17 +9,24 @@
 namespace classes\model;
 
 /**
- * View and validate all data in sql
  * Class LoginModel
  * @package classes\model
  */
 class LoginModel extends Model
 {
+    /**
+     * LoginModel constructor.
+     */
     public function __construct()
     {
         parent::__construct();
     }
 
+    /**
+     * Validate to sign in the user
+     * @param $data
+     * @return array
+     */
     public function getSignInData($data)
     {
         $sql = "SELECT * FROM users 

@@ -22,16 +22,30 @@ use classes\controller\ContactController;
  */
 class App
 {
-    /**
-     * Session 1
-     * Building page content with parameter 'p'.
-     */
     public $page;
+
+    /**
+     * Directory to Homepage
+     * @var string
+     */
     private $homepage = "home";
+
+    /**
+     * Directory to Not Found page
+     * @var string
+     */
     private $notFound = "404";
+
+    /**
+     * Directory to signup page
+     * @var string
+     */
     public $signup = "signup";
 
-    // Frontend page
+    /**
+     * Frontend menu
+     * @var array
+     */
     private $frontendNav = array(
         "home" => "Home",
         "about" => "About Us",
@@ -40,14 +54,20 @@ class App
         "login" => "Login",
     );
 
-    // Backend page
+    /**
+     * Backend menu
+     * @var array
+     */
     private $backendNav = array(
         "home" => "Home",
         "news" => "News & Deadlines",
         "profile" => "Profile",
     );
 
-    // Footer page
+    /**
+     * Footer menu
+     * @var array
+     */
     private $footer = array(
         "faq" => "FAQ",
         "job" => "Jobs",
@@ -56,16 +76,19 @@ class App
         "contact" => "Contact"
     );
 
+    /**
+     * Build navigation array
+     * @var array
+     */
     public static $nav = [];
 
+    /**
+     * App constructor.
+     */
     public function __construct()
     {
         session_start();
 
-        /**
-         * Navigation
-         * Building Navigation & Footer
-         */
         self::$nav['frontend'] = $this->frontendNav;
         self::$nav['backend'] = $this->backendNav;
         self::$nav['footer'] = $this->footer;
@@ -157,7 +180,11 @@ class App
         }
     }
 
-    // Validation Page Content
+    /**
+     * Validate the page content
+     * @param $getParam
+     * @return string
+     */
     public function validationPage($getParam)
     {
         if (!isset($getParam) || empty($getParam)) {

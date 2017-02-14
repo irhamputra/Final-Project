@@ -18,9 +18,20 @@ use classes\model\Model;
  */
 class LoginController
 {
+    /**
+     * All status
+     * @var
+     */
     public $status;
+
+    /**
+     * @var LoginModel
+     */
     private $loginModel;
 
+    /**
+     * LoginController constructor.
+     */
     public function __construct()
     {
         $this->request = array_merge($_GET, $_POST);
@@ -28,11 +39,18 @@ class LoginController
         $this->execute();
     }
 
+    /**
+     * Execute the code
+     */
     public function execute()
     {
         $this->validationSignIn($this->request['login']);
     }
 
+    /**
+     * Validate data in signin form
+     * @param $data
+     */
     public function validationSignIn($data)
     {
         if (isset($data["submit"])) {

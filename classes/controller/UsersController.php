@@ -22,6 +22,9 @@ class UsersController
     public $status;
     private $request, $model;
 
+    /**
+     * UsersController constructor.
+     */
     public function __construct()
     {
         $this->request = array_merge($_GET, $_POST);
@@ -29,11 +32,18 @@ class UsersController
         $this->execute();
     }
 
+    /**
+     * Execute the code
+     */
     public function execute()
     {
         $this->checkUsersIn($this->request["signup"]);
     }
 
+    /**
+     * Insert the user data in login session
+     * @param $data
+     */
     public function checkUsersIn($data)
     {
         if ($data["submit"]){
