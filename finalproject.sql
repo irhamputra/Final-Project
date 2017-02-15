@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Feb 14, 2017 at 03:48 PM
+-- Generation Time: Feb 15, 2017 at 11:55 PM
 -- Server version: 5.5.42
 -- PHP Version: 7.0.0
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `finalproject`
 --
-CREATE DATABASE IF NOT EXISTS `finalproject` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `finalproject`;
 
 -- --------------------------------------------------------
 
@@ -28,7 +26,6 @@ USE `finalproject`;
 -- Table structure for table `news`
 --
 
-DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
   `news_title` varchar(320) NOT NULL,
   `news_description` text NOT NULL,
@@ -52,7 +49,6 @@ INSERT INTO `news` (`news_title`, `news_description`, `news_image_url`, `news_de
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
   `user_username` varchar(64) NOT NULL,
@@ -69,7 +65,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `user_username`, `user_password`, `user_email`, `user_role`, `user_created`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'irhamputraprasetyo@gmail.com', 'admin', '2017-02-10 19:20:27'),
 (0, 'irhamputra', 'ae51f075e63bfa905c95ee1c5f6fb036', 'hello@irhamputra.com', 'Designer', '2017-02-10 19:24:14'),
-(0, 'ulfapus', 'a08151cf65d440fc13ef28c94e0be3d8', 'ulfapus@gmail.com', 'Client', '2017-02-10 19:25:10');
+(0, 'ulfapus', 'a08151cf65d440fc13ef28c94e0be3d8', 'ulfapus@gmail.com', 'Client', '2017-02-10 19:25:10'),
+(0, 'm.stockenberg', '505c660dbdd33aa583a9098540b34a8b', 'm.stockenberg@gmail.com', 'Client', '2017-02-15 21:55:23'),
+(0, 'm.lutze', '925d7518fc597af0e43f5606f9a51512', 'whatever@blabla.de', 'Designer', '2017-02-15 22:51:49');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

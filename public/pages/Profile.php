@@ -1,15 +1,7 @@
 <hr>
 <div class="container">
-<?php
+    <?php echo "<h4>Hi! " . $_SESSION['username'] . ", you are logged in!</h4> <br>"; ?>
 
-echo "<h4>Hi! " . $_SESSION['username'] . ", you are logged in!</h4> <br>";
+    <a class="btn btn-m btn-primary" href="?logout=true">Logout</a>
 
-$t=time();
-echo($t . "<br>");
-echo(date("Y-m-d",$t));
-
-?>
-    <pre>
-        <?php print_r($_SESSION) ?>
-    </pre>
 </div>

@@ -46,6 +46,5 @@ class NewsModel extends Model
             ":image_url" => $data["ImageUrl"],
             ":deadline" => $data["Deadline"],
         ]);
-
     }
 }

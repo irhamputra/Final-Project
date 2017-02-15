@@ -20,6 +20,7 @@
         <input type="hidden" name="login[loginForm]" value="true"/>
         <button class="btn btn-lg btn-primary btn-block" name="login[submit]" type="submit">Sign in</button>
     </form>
-    <p class="text-center">Don't have an account? <a class="btn btn-xs btn-primary" href="?p=signup" role="button">Sign Up Now!</a></p>
+    <p class="text-center">Don't have an account? <a class="btn btn-xs btn-primary" href="?p=signup" role="button">Sign
+            Up Now!</a></p>
 
 </div> <!-- /container -->

@@ -48,9 +48,8 @@ class NewsController
      */
     public function checkNews($data)
     {
-        if ($data["submit"]){
-            if (empty($this->status["error"]))
-            {
+        if ($data["submit"]) {
+            if (empty($this->status["error"])) {
                 $this->model->insertNews($data);
                 Model::newDestination("news");
             }

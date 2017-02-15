@@ -19,7 +19,6 @@
                         <?php foreach (\classes\core\App::$nav['backend'] as $param => $link) : ?>
                             <li><a href="?p=<?= $param ?>"><?= $link ?></a></li>
                         <?php endforeach; ?>
-                        <li><a href="?logout=true">Logout</a></li>
                     </ul>
                 </div>
             </div>
