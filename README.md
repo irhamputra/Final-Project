@@ -32,4 +32,4 @@ Footer
 5. Contact
 
 This website is definitive offline, you have to put all the stuff into your localhost.
-You can simply log in with Username: admin Password: admin.
+You can simply try to log in as Client with username: m.stockenberg pass: marten or as Designer username: m.lutze pass: martin
