@@ -6,13 +6,14 @@ Lecture: Marten Stockenberg.
 Understanding and implementation PHP Object Oriented with MVC Design Pattern.
 
 Website name: Camping Art - Home of Graphic Design freelancer.
+Concept of this website is Client find the designer easily what they need. Client can simply write what they want as well via form and then Designer can see what's new in News & Deadline menu
 
 Purpose: Clients can find the talented freelancer what their need.
 
 Content of the website:
 
 Frontend
-1. Home (All marketing stuff)
+1. Home
 2. About Us
 3. How it works.
 4. The Talent - People in Camping Art
@@ -22,7 +23,7 @@ Backend
 1. Home
 2. News & Deadlines
 3. Profile
-4. Logout
+    1. Logout
 
 Footer
 1. FAQ
